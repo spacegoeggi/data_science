@@ -39,10 +39,20 @@ def merge_sort(to_sort):
 
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 x = range(len(my_list))
-plt.plot(x, my_list)
+
+
+plt.bar(x, my_list)
+plt.xticks(ticks=range(len(my_list)))
+plt.title("list before sorting")
+plt.xlabel("position in list")
+plt.ylabel("value")
 plt.show() # plot of original list
 merge_sort(my_list)
-plt.plot(x, my_list)
+plt.bar(x, my_list)
+plt.xticks(ticks=range(len(my_list)))
+plt.title("list after sorting")
+plt.xlabel("position in list")
+plt.ylabel("value")
 plt.show() # plot of sorted list
 
 
