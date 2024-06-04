@@ -43,9 +43,30 @@ import matplotlib.pyplot as plt
 
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 x = range(len(my_list))
-plt.plot(x, my_list)
-plt.show()
-mergeSort(my_list)
-x = range(len(my_list))
-plt.plot(x, my_list)
-plt.show()
+
+
+plt.bar(x, my_list)
+plt.xticks(ticks=range(len(my_list)))
+plt.title("list before sorting")
+plt.xlabel("position in list")
+plt.ylabel("value")
+plt.show() # plot of original list
+merge_sort(my_list)
+plt.bar(x, my_list)
+plt.xticks(ticks=range(len(my_list)))
+plt.title("list after sorting")
+plt.xlabel("position in list")
+plt.ylabel("value")
+plt.show() # plot of sorted list
+
+
+# changed ASSIGNMENT to assignment
+# gelöscht: and not len(to_sort) < 1
+# and len(to_sort) != 0
+# changed mergeSort to merge_sort
+# changed list_to_be_sorted_by_merch to to_sort    
+# def assignment(new_list, i, old_list, j): 
+#    new_list[i] = old_list[j]        rausgeschmissen
+# x = range(len(my_list)) rausgeschmissen
+# while l<len(left) and r<len(right): changed spacing
+
